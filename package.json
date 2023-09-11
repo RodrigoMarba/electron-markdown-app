@@ -19,6 +19,14 @@
     "e2e": "playwright test"
   },
   "dependencies": {
+    "@codemirror/commands": "^6.2.5",
+    "@codemirror/gutter": "^0.19.9",
+    "@codemirror/highlight": "^0.19.8",
+    "@codemirror/history": "^0.19.2",
+    "@codemirror/lang-javascript": "^6.2.1",
+    "@codemirror/language": "^6.9.0",
+    "@codemirror/matchbrackets": "^0.19.4",
+    "@codemirror/state": "^6.2.1",
     "electron-updater": "^6.1.1"
   },
   "devDependencies": {
