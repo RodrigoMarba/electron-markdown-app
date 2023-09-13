@@ -1,22 +1,21 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.scss";
+import Editor from "./editor";
 
 console.log("[App.tsx]", `Hello world from Electron ${process.versions.electron}!`);
 
-function App() {
-	const [count, setCount] = useState(0);
+const App: React.FC = () => {
+	const [doc, setDoc] = useState<string>("# Hello, World!\n");
+
+	const handleDocChange = useCallback((newDoc: string) => {
+		setDoc(newDoc);
+	}, []);
+
 	return (
 		<div className="app">
-			<header className="app-header">
-				<p>Funcionas???</p>
-				<p>
-					<button onClick={() => setCount((count) => count + 1)}>
-						Counter = {count}
-					</button>
-				</p>
-			</header>
+			<Editor onChange={handleDocChange} initialDoc={doc} />
 		</div>
 	);
-}
+};
 
 export default App;
