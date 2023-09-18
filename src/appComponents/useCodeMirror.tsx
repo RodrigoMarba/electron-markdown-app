@@ -1,12 +1,21 @@
 import { useEffect, useState, useRef } from "react";
 import { EditorState } from "@codemirror/state";
-import { EditorView, keymap, highlightActiveLine } from "@codemirror/view";
-import { defaultKeymap, indentWithTab } from "@codemirror/commands";
-import { history, historyKeymap } from "@codemirror/history";
-import { indentOnInput } from "@codemirror/language";
-import { bracketMatching } from "@codemirror/matchbrackets";
-import { lineNumbers, highlightActiveLineGutter } from "@codemirror/gutter";
-import { defaultHighlightStyle, HighlightStyle, tags } from "@codemirror/highlight";
+import {
+	EditorView,
+	keymap,
+	highlightActiveLine,
+	lineNumbers,
+	highlightActiveLineGutter,
+} from "@codemirror/view";
+import { defaultKeymap, indentWithTab, history, historyKeymap } from "@codemirror/commands";
+import {
+	indentOnInput,
+	bracketMatching,
+	HighlightStyle,
+	defaultHighlightStyle,
+	syntaxHighlighting,
+} from "@codemirror/language";
+import { tags } from "@lezer/highlight";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
 import { oneDark } from "@codemirror/theme-one-dark";
@@ -19,7 +28,7 @@ export const transparentTheme = EditorView.theme({
 	},
 });
 
-const syntaxHighlighting = HighlightStyle.define([
+const myHighlighting = HighlightStyle.define([
 	{
 		tag: tags.heading1,
 		fontSize: "1.6em",
@@ -34,6 +43,19 @@ const syntaxHighlighting = HighlightStyle.define([
 		tag: tags.heading3,
 		fontSize: "1.2em",
 		fontWeight: "bold",
+	},
+	{
+		tag: tags.keyword,
+		color: "#fc6",
+	},
+	{
+		tag: tags.comment,
+		color: "#f5d",
+		fontStyle: "italic",
+	},
+	{
+		tag: tags.quote,
+		color: "#999",
 	},
 ]);
 
@@ -56,6 +78,11 @@ const useCodeMirror = <T extends Element>(
 			doc: props.initialDoc,
 			extensions: [
 				keymap.of([...defaultKeymap, indentWithTab]),
+				lineNumbers(),
+				highlightActiveLineGutter(),
+				syntaxHighlighting(myHighlighting),
+				history(),
+				bracketMatching(),
 				highlightActiveLine(),
 				indentOnInput(),
 				markdown({

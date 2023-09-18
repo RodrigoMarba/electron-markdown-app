@@ -21,17 +21,24 @@
 	"dependencies": {
 		"@codemirror/commands": "^6.2.5",
 		"@codemirror/gutter": "^0.19.9",
-		"@codemirror/highlight": "^0.19.8",
-		"@codemirror/history": "^0.19.2",
 		"@codemirror/lang-javascript": "^6.2.1",
 		"@codemirror/lang-markdown": "^6.2.0",
 		"@codemirror/language": "^6.9.0",
 		"@codemirror/language-data": "^6.3.1",
-		"@codemirror/matchbrackets": "^0.19.4",
 		"@codemirror/state": "^6.2.1",
 		"@codemirror/theme-one-dark": "^6.1.2",
 		"@codemirror/view": "^6.18.1",
-		"electron-updater": "^6.1.1"
+		"@lezer/highlight": "^1.1.6",
+		"assert": "^2.1.0",
+		"electron-updater": "^6.1.1",
+		"github-markdown-css": "^5.2.0",
+		"hast-util-sanitize": "^5.0.0",
+		"process": "^0.11.10",
+		"react-markdown": "^8.0.7",
+		"remark-gfm": "^4.0.0",
+		"remark-parse": "^11.0.0",
+		"remark-react": "^9.0.1",
+		"unified": "^11.0.3"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.37.1",

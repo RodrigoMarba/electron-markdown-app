@@ -47,7 +47,7 @@ async function createWindow() {
 		// frame: false,
 		backgroundMaterial: "none",
 		autoHideMenuBar: true,
-		opacity: 0.75,
+		opacity: 0.85,
 		webPreferences: {
 			backgroundThrottling: false,
 			preload,

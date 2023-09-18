@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react";
 import "./App.scss";
-import Editor from "./editor";
-
-console.log("[App.tsx]", `Hello world from Electron ${process.versions.electron}!`);
+import Editor from "./appComponents/editor";
+import Preview from "./appComponents/preview";
 
 const App: React.FC = () => {
 	const [doc, setDoc] = useState<string>("# Hello, World!\n");
@@ -14,6 +13,7 @@ const App: React.FC = () => {
 	return (
 		<div className="app">
 			<Editor onChange={handleDocChange} initialDoc={doc} />
+			<Preview doc={doc} />
 		</div>
 	);
 };
