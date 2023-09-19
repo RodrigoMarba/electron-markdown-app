@@ -32,7 +32,7 @@ const Preview: React.FC<Props> = (props) => {
 			},
 		})
 		.processSync(props.doc).result;
-	return <div className="preview markdown-body">{md as React.ReactNode}</div>;
+	return <div className="preview markdown-body animeLeft">{md as React.ReactNode}</div>;
 };
 
 export default Preview;
