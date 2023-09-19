@@ -16,11 +16,6 @@ const fileManager: React.FC<Props> = (props) => {
 					<li className="item">Text 2.md</li>
 				</ul>
 			</div>
-			<div className="text-controler">
-				<button className="button" onClick={props.handleClick}>
-					{props.edit ? "Preview" : "Edit"}
-				</button>
-			</div>
 		</div>
 	);
 };

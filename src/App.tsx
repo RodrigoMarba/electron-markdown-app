@@ -21,6 +21,11 @@ const App: React.FC = () => {
 		<div className="app">
 			<FileManager edit={edit} handleClick={handleClick} />
 			{edit ? <Editor onChange={handleDocChange} initialDoc={doc} /> : <Preview doc={doc} />}
+			<div className="text-controller">
+				<button className="button-text-controller" onClick={handleClick}>
+					{edit ? "Preview" : "Edit"}
+				</button>
+			</div>
 		</div>
 	);
 };
