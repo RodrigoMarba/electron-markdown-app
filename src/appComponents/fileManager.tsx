@@ -12,32 +12,14 @@ const fileManager: React.FC<Props> = (props) => {
 			<div className="manager">
 				<h1 className="title">Table of contents</h1>
 				<ul className="list">
-					<li className="item-active">Text Markdown test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
-					<li className="item">Long list test.md</li>
+					<li className="item-active">Text Markdown example</li>
+					<li className="item">Text example 2</li>
 				</ul>
 			</div>
 			<div className="create-container">
-				<button className="create-button">Create new file +</button>
+				<button className="create-button" disabled>
+					to do +
+				</button>
 			</div>
 		</div>
 	);

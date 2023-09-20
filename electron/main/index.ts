@@ -45,6 +45,8 @@ async function createWindow() {
 	win = new BrowserWindow({
 		// transparent: true,
 		// frame: false,
+		height: 640,
+		width: 1180,
 		backgroundMaterial: "none",
 		autoHideMenuBar: true,
 		opacity: 0.85,

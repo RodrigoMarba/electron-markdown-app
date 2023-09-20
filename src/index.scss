@@ -72,3 +72,10 @@ code {
 		transform: initial;
 	}
 }
+
+*:disabled {
+	background-color: rgba(105, 105, 105, 0.5411764706);
+	color: linen;
+	font-size: 22px;
+	padding: 0 50px;
+}
