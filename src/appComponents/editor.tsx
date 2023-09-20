@@ -23,7 +23,7 @@ const Editor: React.FC<Props> = (props) => {
 		}
 	}, [editorView]);
 
-	return <div className="editor-wrapper" ref={refContainer}></div>;
+	return <div className="editor-wrapper animeRight" ref={refContainer}></div>;
 };
 
 export default Editor;
