@@ -13,8 +13,31 @@ const fileManager: React.FC<Props> = (props) => {
 				<h1 className="title">Table of contents</h1>
 				<ul className="list">
 					<li className="item-active">Text Markdown test.md</li>
-					<li className="item">Text 2.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
+					<li className="item">Long list test.md</li>
 				</ul>
+			</div>
+			<div className="create-container">
+				<button className="create-button">Create new file +</button>
 			</div>
 		</div>
 	);

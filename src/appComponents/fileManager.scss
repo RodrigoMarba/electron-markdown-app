@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	background-color: #000000;
+	background-color: #050505;
 	flex-direction: column;
 	overflow: auto;
 	z-index: 10;
@@ -37,6 +37,7 @@
 	display: flex;
 	border-radius: 0 20px 20px 0;
 	width: 80%;
+	cursor: pointer;
 }
 
 .item-active {
@@ -49,4 +50,27 @@
 	border-radius: 0 20px 20px 0;
 	width: 87%;
 	font-weight: 700;
+}
+
+.create-container {
+	/* margin: 5px auto 20px;*/
+	background-color: #000;
+	position: sticky;
+	width: 100%;
+	display: flex;
+	bottom: 0;
+	/* align-content: center; */
+	justify-content: center;
+	align-items: center;
+}
+
+.create-button {
+	height: 45px;
+	width: auto;
+	background-color: rgb(27, 31, 35);
+	border-radius: 5px;
+	padding: 0 15px;
+	color: beige;
+	margin: 20px;
+	box-shadow: 0px 2px 6px 3px rgba(96, 96, 86, 0.5);
 }
