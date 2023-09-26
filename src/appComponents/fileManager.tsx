@@ -13,10 +13,12 @@ const fileManager: React.FC<Props> = (props) => {
 				<h1 className="title">Table of contents</h1>
 				<ul className="list">
 					<li className="item-active">Text Markdown example</li>
-					<li className="item">Text example 2</li>
+					<li className="item" style={{ display: "none" }}>
+						Text example 2
+					</li>
 				</ul>
 			</div>
-			<div className="create-container">
+			<div className="create-container" style={{ display: "none" }}>
 				<button className="create-button" disabled>
 					to do +
 				</button>
