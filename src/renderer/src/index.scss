@@ -1,0 +1,82 @@
+html,
+body {
+  background-color: #000000;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Ubuntu', 'Canterell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #eeeeee;
+  font-size: large;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #000;
+}
+
+.animeLeft {
+  opacity: 1;
+  transform: translateX(-100%);
+  animation: animeLeft 0.3s forwards;
+  z-index: 1;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeRight {
+  opacity: 1;
+  transform: translateX(100%);
+  animation: animeRight 0.3s forwards;
+  z-index: 1;
+}
+
+@keyframes animeRight {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+*:disabled {
+  background-color: rgba(105, 105, 105, 0.5411764706);
+  color: linen;
+  font-size: 22px;
+  padding: 0 50px;
+}

@@ -1,0 +1,35 @@
+.app {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.app-header {
+  margin: 5px auto;
+}
+
+button {
+  font-size: calc(10px + 1rem);
+}
+
+.text-controller {
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  width: auto;
+  right: 0;
+  background: transparent;
+}
+
+.button-text-controller {
+  height: 45px;
+  width: 135px;
+  background-color: rgb(27, 31, 35);
+  border-radius: 5px;
+  /*border: solid 2px beige;*/
+  color: beige;
+  margin: 10px 15px;
+  box-shadow: 3px 3px 6px 3px rgba(96, 96, 86, 0.5);
+}
