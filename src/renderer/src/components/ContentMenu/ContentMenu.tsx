@@ -1,42 +1,48 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import './ContentMenu.scss'
-// import { listFiles } from './../../filesManager'
+import { listFiles } from './../../filesManager'
 
 interface Props {
-  handleClick: React.MouseEventHandler<HTMLButtonElement>
-  edit: boolean
+  //handleClick: React.MouseEventHandler<HTMLButtonElement>
+  setText: Dispatch<SetStateAction<string>>
 }
 
-const ContentMenu: React.FC<Props> = () => {
-  const [titles, setTitles] = useState<string[]>(['test 1.md', 'test 2.md'])
+const ContentMenu: React.FC<Props> = ({ setText }) => {
+  const [titles, setTitles] = useState<string[]>([])
+  const [activeIndex, setActiveIndex] = useState<number>()
 
-  //  useEffect(() => {
-  //    listFiles()
-  //      .then((titlesList) => {
-  //        setTitles(titlesList)
-  //      })
-  //    .catch((error) => {
-  //    console.error('Error reading file names:', error)
-  //  })
-  //}, [])
+  useEffect(() => {
+    listFiles()
+      .then((titlesList) => {
+        setTitles(titlesList)
+      })
+      .catch((error) => {
+        console.error('Error reading file names:', error)
+      })
+  }, [])
+
+  const handleClick = (title, index) => {
+    setActiveIndex(index)
+    console.log(title)
+    setText(title)
+    console.log('onChild e os caralhos')
+  }
 
   return (
     <div className="viewer">
       <div className="manager">
         <h1 className="title">Table of contents</h1>
         <ul className="list">
-          <li className="item-active">Text Markdown example</li>
-          {
-            // comment
-          }
-          {titles.map((title) => (
-            <li className="item" id="randon" key={Math.random()}>
+          {titles.map((title, index) => (
+            <li
+              className={index === activeIndex ? 'item-active' : 'item'}
+              id="randon"
+              key={index}
+              onClick={() => handleClick(title, index)}
+            >
               {title}
             </li>
           ))}
-          {
-            //comment
-          }
         </ul>
       </div>
       <div className="create-container">
