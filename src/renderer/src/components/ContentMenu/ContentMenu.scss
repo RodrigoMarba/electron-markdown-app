@@ -30,25 +30,22 @@
 
 .item {
   height: auto;
-  padding: 20px;
+  padding: 10px 15px;
   background-color: rgba(27, 31, 35, 0.45);
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   align-items: center;
   display: flex;
-  border-radius: 0 20px 20px 0;
-  width: 80%;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .item-active {
   height: auto;
-  padding: 20px;
-  background-color: rgb(90 104 117 / 45%);
-  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgba(90, 104, 117, 0.45);
+  margin-bottom: 3px;
   align-items: center;
   display: flex;
-  border-radius: 0 20px 20px 0;
-  width: 87%;
   font-weight: 700;
 }
 

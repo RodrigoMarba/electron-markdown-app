@@ -10,7 +10,12 @@ interface Props {
 const Editor: React.FC<Props> = (props) => {
   const { onChange, initialDoc } = props
 
-  const handleChange = useCallback((state: any) => onChange(state.doc.toString()), [onChange])
+  const handleChange = useCallback(
+    (state: any) => {
+      onChange(state.doc.toString())
+    },
+    [onChange]
+  )
 
   const [refContainer, editorView] = useCodeMirror<HTMLDivElement>({
     initialDoc: initialDoc,

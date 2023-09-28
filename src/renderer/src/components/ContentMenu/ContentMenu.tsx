@@ -5,9 +5,10 @@ import { listFiles } from './../../filesManager'
 interface Props {
   //handleClick: React.MouseEventHandler<HTMLButtonElement>
   setText: Dispatch<SetStateAction<string>>
+  setEdit: Dispatch<SetStateAction<boolean>>
 }
 
-const ContentMenu: React.FC<Props> = ({ setText }) => {
+const ContentMenu: React.FC<Props> = ({ setText, setEdit }) => {
   const [titles, setTitles] = useState<string[]>([])
   const [activeIndex, setActiveIndex] = useState<number>()
 
@@ -15,17 +16,17 @@ const ContentMenu: React.FC<Props> = ({ setText }) => {
     listFiles()
       .then((titlesList) => {
         setTitles(titlesList)
+        console.log('reprocessou a lista de arquivos!')
       })
       .catch((error) => {
         console.error('Error reading file names:', error)
       })
   }, [])
 
-  const handleClick = (title, index) => {
+  const handleClick = (title: string, index: number) => {
+    setEdit(false)
     setActiveIndex(index)
-    console.log(title)
     setText(title)
-    console.log('onChild e os caralhos')
   }
 
   return (
@@ -36,7 +37,6 @@ const ContentMenu: React.FC<Props> = ({ setText }) => {
           {titles.map((title, index) => (
             <li
               className={index === activeIndex ? 'item-active' : 'item'}
-              id="randon"
               key={index}
               onClick={() => handleClick(title, index)}
             >
