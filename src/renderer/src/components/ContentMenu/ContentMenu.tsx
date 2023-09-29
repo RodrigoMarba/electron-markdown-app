@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import './ContentMenu.scss'
-import { listFiles } from './../../filesManager'
+import { useEdition } from '@renderer/Hooks/useEdition'
 
 interface Props {
   //handleClick: React.MouseEventHandler<HTMLButtonElement>
@@ -11,6 +11,8 @@ interface Props {
 const ContentMenu: React.FC<Props> = ({ setText, setEdit }) => {
   const [titles, setTitles] = useState<string[]>([])
   const [activeIndex, setActiveIndex] = useState<number>()
+
+  const { listFiles } = useEdition()
 
   useEffect(() => {
     listFiles()

@@ -1,13 +1,16 @@
-import { useCallback, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.scss'
 import Editor from './components/Editor/Editor'
 import Preview from './components/Preview/Preview'
 import ContentMenu from './components/ContentMenu/ContentMenu'
-import { getContent, saveDocument } from './filesManager'
+
+import { useEdition } from './Hooks/useEdition'
 
 const App: React.FC = () => {
   const [edit, setEdit] = useState<boolean>(false)
   const [text, setText] = useState<string>('')
+
+  const { getContent, saveDocument } = useEdition()
 
   function handleClick() {
     setEdit(!edit)
@@ -31,20 +34,16 @@ const App: React.FC = () => {
     }
   }, [text])
 
-  const handleDocChange = useCallback((newDoc: string) => {
+  const handleDocChange = (newDoc: string) => {
     setDoc(newDoc)
     console.log('handleDocChange saveDocument: ', text)
     saveDocument(text, newDoc)
-  }, [])
+  }
 
   return (
     <div className="app">
       <ContentMenu setText={setText} setEdit={setEdit} />
-      {edit ? (
-        <Editor onChange={handleDocChange} initialDoc={doc} setText={setText} />
-      ) : (
-        <Preview doc={doc} />
-      )}
+      {edit ? <Editor onChange={handleDocChange} initialDoc={doc} /> : <Preview doc={doc} />}
       <div className="text-controller">
         {text && (
           <button className="button-text-controller" onClick={handleClick}>
