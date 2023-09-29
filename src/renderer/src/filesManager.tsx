@@ -36,7 +36,7 @@ export async function getContent(item: string): Promise<string> {
 }
 
 export async function saveDocument(filename: string, doc: string) {
-  console.log('started')
+  // console.log('started to save: ', filename)
   const file = `./Content/${filename}.md`
 
   fs.writeFile(file, doc, (err) => {
@@ -44,7 +44,7 @@ export async function saveDocument(filename: string, doc: string) {
       throw new Error(err)
     }
   })
-  console.log('ended')
+  // console.log('content: ', doc)
 }
 
 //export async function saveDocument(filename: string, doc: string) {

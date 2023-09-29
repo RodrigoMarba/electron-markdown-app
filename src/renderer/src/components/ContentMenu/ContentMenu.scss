@@ -50,24 +50,21 @@
 }
 
 .create-container {
-  /* margin: 5px auto 20px;*/
   background-color: #000;
-  position: sticky;
   width: 100%;
   display: flex;
-  bottom: 0;
-  /* align-content: center; */
+  top: 0;
   justify-content: center;
   align-items: center;
 }
 
 .create-button {
-  height: 45px;
+  height: auto;
   width: auto;
   background-color: rgb(27, 31, 35);
   border-radius: 5px;
   padding: 0 15px;
   color: beige;
-  margin: 20px;
+  margin: 10px;
   box-shadow: 0px 2px 6px 3px rgba(96, 96, 86, 0.5);
 }

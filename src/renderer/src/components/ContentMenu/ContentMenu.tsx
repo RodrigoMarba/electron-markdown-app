@@ -27,12 +27,17 @@ const ContentMenu: React.FC<Props> = ({ setText, setEdit }) => {
     setEdit(false)
     setActiveIndex(index)
     setText(title)
+    console.log('setText: ', title)
   }
 
   return (
     <div className="viewer">
       <div className="manager">
-        <h1 className="title">Table of contents</h1>
+        {/* <h1 className="title">Table of contents</h1> */}
+        <div className="create-container">
+          <button className="create-button">Create new +</button>
+        </div>
+
         <ul className="list">
           {titles.map((title, index) => (
             <li
@@ -44,11 +49,6 @@ const ContentMenu: React.FC<Props> = ({ setText, setEdit }) => {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="create-container">
-        <button className="create-button" disabled>
-          to do +
-        </button>
       </div>
     </div>
   )
