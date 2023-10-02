@@ -1,9 +1,9 @@
 import React, { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import './ContentMenu.scss'
 import { useEdition } from '@renderer/Hooks/useEdition'
+import TitleList from '../TitleList/TitleList'
 
 interface Props {
-  //handleClick: React.MouseEventHandler<HTMLButtonElement>
   setText: Dispatch<SetStateAction<string>>
   setEdit: Dispatch<SetStateAction<boolean>>
 }
@@ -35,22 +35,10 @@ const ContentMenu: React.FC<Props> = ({ setText, setEdit }) => {
   return (
     <div className="viewer">
       <div className="manager">
-        {/* <h1 className="title">Table of contents</h1> */}
         <div className="create-container">
           <button className="create-button">Create new +</button>
         </div>
-
-        <ul className="list">
-          {titles.map((title, index) => (
-            <li
-              className={index === activeIndex ? 'item-active' : 'item'}
-              key={index}
-              onClick={() => handleClick(title, index)}
-            >
-              {title}
-            </li>
-          ))}
-        </ul>
+        <TitleList titles={titles} activeIndex={activeIndex} handleClick={handleClick} />
       </div>
     </div>
   )

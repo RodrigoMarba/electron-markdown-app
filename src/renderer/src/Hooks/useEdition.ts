@@ -45,9 +45,17 @@ export const useEdition = () => {
     })
   }
 
+  async function renameDocument(filename: string, newFilemane: string) {
+    fs.rename(filename, newFilemane, (err) => {
+      console.log(filename, 'renamed => ', newFilemane)
+      if (err) throw new Error(err)
+    })
+  }
+
   return {
     listFiles,
     getContent,
-    saveDocument
+    saveDocument,
+    renameDocument
   }
 }

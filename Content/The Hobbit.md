@@ -19,9 +19,9 @@ Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, n
 
 ---
 # Things to do:
-- [x] Meet the dwarves and Gandalf
-- [x] Leave the Shire
-- [x] Encounter trolls
+- [ ] Meet the dwarves and Gandalf
+- [ ] Leave the Shire
+- [ ] Encounter trolls
 - [ ] Escape from goblins 
 - [ ] Reach Rivendell and meet Elrond
 - [ ] ...
@@ -45,3 +45,5 @@ if (trollsEncountered) {
 > To dungeons deep and caverns old
 > We must away ere break of day
 > To seek the pale enchanted gold.
+>
+> one thing more

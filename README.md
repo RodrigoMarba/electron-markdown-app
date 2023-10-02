@@ -1,6 +1,6 @@
 # markdown-app-package
 
-An Electron application with React and TypeScript
+> An Text editor for Markdown extention build with Electron framework with React and TypeScript
 
 ## Recommended IDE Setup
 
