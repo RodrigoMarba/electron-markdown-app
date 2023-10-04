@@ -46,8 +46,20 @@ export const useEdition = () => {
   }
 
   async function renameDocument(filename: string, newFilemane: string) {
-    fs.rename(filename, newFilemane, (err) => {
+    const filePath = `./Content/${filename}.md`
+    const newFilePath = `./Content/${newFilemane}.md`
+
+    fs.rename(filePath, newFilePath, (err) => {
       console.log(filename, 'renamed => ', newFilemane)
+      if (err) throw new Error(err)
+    })
+  }
+
+  async function deleteDocument(filename: string) {
+    const filePath = `./Content/${filename}.md`
+
+    fs.unlink(filePath, (err) => {
+      console.log('Deleted file: ', filename)
       if (err) throw new Error(err)
     })
   }
@@ -56,6 +68,7 @@ export const useEdition = () => {
     listFiles,
     getContent,
     saveDocument,
-    renameDocument
+    renameDocument,
+    deleteDocument
   }
 }
