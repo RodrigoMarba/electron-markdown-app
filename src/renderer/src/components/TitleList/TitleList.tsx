@@ -5,11 +5,11 @@ import { useEdition } from '@renderer/Hooks/useEdition'
 interface Props {
   titles: string[]
   activeIndex?: number
-  handleClick: (title: string, index: number) => void
+  changeText: (title: string, index: number) => void
   setText: (text: string) => void
 }
 
-const TitleList: React.FC<Props> = ({ titles, setText, activeIndex, handleClick }) => {
+const TitleList: React.FC<Props> = ({ titles, setText, activeIndex, changeText }) => {
   const { renameDocument, deleteDocument } = useEdition()
 
   const [filenameEdit, setFilenameEdit] = useState(false)
@@ -20,9 +20,8 @@ const TitleList: React.FC<Props> = ({ titles, setText, activeIndex, handleClick 
   }
 
   const handleDelete = (title) => {
+    changeText(titles[0], 0)
     deleteDocument(title)
-    console.log(titles[0])
-    setText(titles[0])
   }
 
   return (
@@ -31,10 +30,15 @@ const TitleList: React.FC<Props> = ({ titles, setText, activeIndex, handleClick 
         <li
           className={index === activeIndex ? 'item-active' : 'item'}
           key={index}
-          onClick={() => handleClick(title, index)}
+          onClick={index != activeIndex ? () => changeText(title, index) : undefined}
         >
           {filenameEdit && index === activeIndex ? (
-            <input type="text" value={title} onChange={(e) => handleChange(title, e)} />
+            <input
+              className="input-title"
+              type="text"
+              value={title}
+              onChange={(e) => handleChange(title, e)}
+            />
           ) : (
             title
           )}

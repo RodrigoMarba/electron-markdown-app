@@ -29,7 +29,7 @@ const ContentMenu: React.FC<Props> = ({ text, setText, setEdit }) => {
     getFiles()
   }, [text, setText])
 
-  const handleClick = (title: string, index: number) => {
+  const changeText = (title: string, index: number) => {
     setEdit(false)
     setActiveIndex(index)
     setText(title)
@@ -45,7 +45,7 @@ const ContentMenu: React.FC<Props> = ({ text, setText, setEdit }) => {
           titles={titles}
           setText={setText}
           activeIndex={activeIndex}
-          handleClick={handleClick}
+          changeText={changeText}
         />
       </div>
     </div>
