@@ -64,11 +64,20 @@ export const useEdition = () => {
     })
   }
 
+  async function createDocument(filename: string) {
+    const filePath = `./Content/${filename}.md`
+
+    fs.appendFile(filePath, `# ${filename}`, (err) => {
+      if (err) throw new Error(err)
+    })
+  }
+
   return {
     listFiles,
     getContent,
     saveDocument,
     renameDocument,
-    deleteDocument
+    deleteDocument,
+    createDocument
   }
 }

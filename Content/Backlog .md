@@ -2,21 +2,20 @@
 
 ## To do:
 
-- [ ] Create new documents
+- [ ] web integration of contents
 - [ ] adjust code style when start application
 - [ ] hide table of contents
 - [ ] resizeble table of contents
-- [ ] web integration of contents
 
 
 ## Doing:
 
-- [x] rename documents
-- [x] delete documents
-
+- [ ] Create new documents
 
 ## Done:
 
+- [x] rename documents
+- [x] delete documents
 - [x] Content preview and editor
 - [x] Table of contents navigation
 - [x] First usable version
