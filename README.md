@@ -1,6 +1,10 @@
 # Desktop Markdown App
 
-> An Text editor for Markdown extention build with Electron framework with React and TypeScript
+## App Usage Exampple:
+
+https://github.com/RodrigoMarba/electron-markdown-app/assets/39920523/31cfb570-bb99-42cb-973f-e2b2903d4506
+
+
 
 # App Backlog
 
