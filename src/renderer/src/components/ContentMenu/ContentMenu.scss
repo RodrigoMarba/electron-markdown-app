@@ -24,30 +24,31 @@
   background-color: #000;
   width: 100%;
   display: flex;
-  top: 0;
   justify-content: center;
   align-items: center;
 }
 
 .create-button {
-  height: 35px;
-  width: auto;
+  height: 38px;
   background-color: rgb(27, 31, 35);
   border-radius: 5px;
+  border: solid 1px #333;
   padding: 0 15px;
   color: beige;
   margin: 10px;
-  box-shadow: 0px 2px 6px 3px rgba(96, 96, 86, 0.5);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .create-input {
-  height: 32px;
+  all: unset;
+  height: 38px;
   font-size: large;
   font-weight: 400;
   background-color: rgb(27, 31, 35);
   border-radius: 5px;
+  border: solid 1px #333;
   padding: 0 15px;
   color: beige;
   margin: 10px;
-  box-shadow: 0px 2px 6px 3px rgba(96, 96, 86, 0.5);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }

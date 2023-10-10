@@ -1,4 +1,4 @@
-# Chapter 1\_
+# Chapter 1
 
 ## A Long-expected Party
 

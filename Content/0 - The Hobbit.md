@@ -1,5 +1,5 @@
 # There and back again
-## A Hobbits Tale - By Bilbo Baggins
+## A Hobbits Tale
 
 ### Chapters:
 1. An Unexpected Party
