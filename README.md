@@ -1,6 +1,6 @@
 # Desktop Markdown App
 
-## App Usage Exampple:
+## App Usage Example:
 
 https://github.com/RodrigoMarba/electron-markdown-app/assets/39920523/31cfb570-bb99-42cb-973f-e2b2903d4506
 
@@ -12,7 +12,7 @@ https://github.com/RodrigoMarba/electron-markdown-app/assets/39920523/31cfb570-b
 
 - [ ] web integration of contents
 - [ ] adjust code style when start application
-- [ ] hide table of contents
+- [ ] hide table of contents option
 - [ ] resizeble table of contents
 
 ## Done:
